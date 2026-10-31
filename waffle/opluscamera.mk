@@ -71,7 +71,7 @@ $(call soong_config_set,camera,package_name,com.oplus.packageName)
 $(call soong_config_set_bool,camera,override_format_from_reserved,true)
 
 # Inherit from camera-vendor.mk
-$(call inherit-product, vendor/oplus/camera/waffle/blobs/blobs-vendor.mk)
+$(call inherit-product-if-exists, vendor/oplus/camera/waffle/blobs/blobs-vendor.mk)
 
 # Common SEpolicy
 include vendor/oplus/camera/sepolicy/SEPolicy.mk
